@@ -1,9 +1,6 @@
 package com.zhc.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * 数据库元数据
@@ -16,7 +13,7 @@ public class MetaDatabase {
      * 数据库ID
      */
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     /**
      * 数据库名称
